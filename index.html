@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YZ International Business</title>
+  <meta name="description" content="Trade fairs, market access, commercial representation, and executive advisory. Asia-Pacific, Europe, and Latin America.">
+  <link rel="canonical" href="https://yurizanoni.com/">
+  <meta property="og:title" content="YZ International Business">
+  <meta property="og:description" content="Trade fairs, market access, commercial representation, and executive advisory. Asia-Pacific, Europe, and Latin America.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yurizanoni.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">YZ <span>International Business</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Commercial capability.<br>Cross-border execution.</h1>
+    <p>Trade fairs, market access, commercial representation, and executive advisory.</p>
+    <p class="regions">Asia-Pacific &nbsp;|&nbsp; Europe &nbsp;|&nbsp; Latin America</p>
+    <a class="btn" href="#contact">Begin a conversation</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>The person behind the work</h2>
+    <p>
+      <strong>Yuri Zanoni</strong><br>
+      International Business &amp; GTM Leader &nbsp;|&nbsp; Founder-led service practice
+    </p>
+    <p style="margin-top:1.3rem;">International marketing and commercial professional with experience at Alibaba Group, ByteDance, and Amazon, spanning Chinese mainland, Asia-Pacific, and international markets. Based in Hong Kong, with Brazilian and Italian citizenship, and a career built around connecting businesses, people, and markets.</p>
+    <p style="margin-top:1rem;">Studied and worked in Chinese mainland; learned Mandarin in Taiwan. Has supported executive delegations and delivered sessions on localisation and Chinese and Brazilian consumer behaviour. Brings strategic GTM experience together with hands-on cross-cultural commercial coordination.</p>
+  </section>
+
+  <section id="services">
+    <h2>How YZ International Business can help</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Trade fairs &amp; delegations</h3>
+        <p>On-site assistance, exhibiting support, business meetings, and post-event follow-up.</p>
+      </div>
+      <div class="card">
+        <h3>Interpreting &amp; localisation</h3>
+        <p>Business interpreting, commercial translation, and multilingual materials.</p>
+      </div>
+      <div class="card">
+        <h3>Sourcing &amp; connections</h3>
+        <p>Buyer and distributor identification, supplier research, and business introductions.</p>
+      </div>
+      <div class="card">
+        <h3>Regional Commercial Desk</h3>
+        <p>Local representation, relationship management, and market follow-through.</p>
+      </div>
+      <div class="card">
+        <h3>Market entry &amp; growth</h3>
+        <p>Market intelligence, localisation, expansion strategy, and international GTM.</p>
+      </div>
+      <div class="card">
+        <h3>Fractional leadership</h3>
+        <p>Selective fractional CMO/CGO and international expansion mandates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <h2>Selected events &amp; fairs</h2>
+    <p class="events-intro">Events attended, worked, or where delegations were supported and led.</p>
+    <table class="events-table">
+      <thead>
+        <tr>
+          <th>Fair / Event</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ProWine Shanghai</td><td>Shanghai, Chinese mainland</td></tr>
+        <tr><td>HOFEX</td><td>Hong Kong</td></tr>
+        <tr><td>Vinexpo Asia</td><td>Hong Kong / Singapore</td></tr>
+        <tr><td>China International Import Expo (CIIE)</td><td>Shanghai, Chinese mainland</td></tr>
+        <tr><td>Canton Fair</td><td>Guangzhou, Chinese mainland</td></tr>
+        <tr><td>MWC Shanghai</td><td>Shanghai, Chinese mainland</td></tr>
+        <tr><td>Hong Kong FinTech Week</td><td>Hong Kong</td></tr>
+        <tr><td>TOKEN2049</td><td>Singapore</td></tr>
+        <tr><td>World of Trading</td><td>Frankfurt, Germany</td></tr>
+        <tr><td>Forum do E-Commerce Brasil</td><td>Brazil</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2 class="contact-heading">Discuss an exhibition, trade project, or international mandate.</h2>
+    <div class="contact-box">
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="What do you need?" required></textarea>
+        <button type="submit">Request a scoped proposal</button>
+      </form>
+      <p class="email-direct">
+        Or email directly: <a class="email-link" href="mailto:yurizanoni@gmail.com">yurizanoni@gmail.com</a>
+      </p>
+    </div>
+    <p class="disclaimer">Services and availability are subject to an agreed scope of work. No unverified client claims.</p>
+  </section>
+
+  <footer>
+    © 2026 YZ International Business. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var name = this.elements.name.value.trim();
+      var email = this.elements.email.value.trim();
+      var message = this.elements.message.value.trim();
+      var body = (name ? 'Name: ' + name + '\n' : '') + (email ? 'Email: ' + email + '\n\n' : '') + message;
+      window.location.href = 'mailto:yurizanoni@gmail.com?subject=' +
+        encodeURIComponent('YZ International Business enquiry') +
+        '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
