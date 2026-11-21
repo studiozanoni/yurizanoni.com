@@ -1,4 +1,4 @@
-name: Configure GitHub Pages
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -8,28 +8,31 @@ on:
 permissions:
   contents: read
   pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  configure:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Enable Pages from main and set custom domain
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+      - name: Prepare published files
         run: |
-          set +e
-          gh api --method POST "repos/${{ github.repository }}/pages" \
-            -f "source[branch]=main" -f "source[path]=/"
-          # Prefer pointing plus custom domain; fall back to source only if the domain is already taken.
-          gh api --method PUT "repos/${{ github.repository }}/pages" \
-            -f "source[branch]=main" -f "source[path]=/" \
-            -f cname='yurizanoni.com'
-          status=$?
-          if [ "$status" -ne 0 ]; then
-            echo "Custom domain could not be set (it may already be claimed). Enabling Pages from main only."
-            gh api --method PUT "repos/${{ github.repository }}/pages" \
-              -f "source[branch]=main" -f "source[path]=/"
-          fi
-          gh api --method PUT "repos/${{ github.repository }}/pages" \
-            -F https_enforced=true || echo "HTTPS enforcement not ready yet; certificate may still be provisioning."
-          gh api "repos/${{ github.repository }}/pages" || true
+          mkdir -p _site
+          cp index.html styles.css CNAME favicon.svg _site/
+          # .nojekyll is unused for Actions Pages, but keep the published tree minimal.
+      - id: setup
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
