@@ -1,9 +1,12 @@
 # yurizanoni.com — redesign preview (branch `redesign-classy-2026`)
 
-Personal site for Yuri Zanoni. Static HTML/CSS, no build step, no tracking, no secrets.
+Personal site for Yuri Zanoni. Static HTML/CSS + small JS, no build step, no tracking, no external requests.
 
-- Brand: YZ seal (crimson `#A3161C` on ivory `#F4EEE2`), near-black `#0E0D0C`, TeX Gyre Pagella for display (as in the IB brochure), Inter for labels.
-- Bilingual EN / PT-BR (toggle top-right; `?lang=pt` also works).
-- Portrait: drop a photo at `assets/portrait.jpg` (4:5, ideally 1200×1500). Until then the seal plate shows.
+**Preview only. Do not merge into `main` until Yuri approves and ib.yurizanoni.com is live.** `main` is the live apex (GitHub Pages).
 
-This branch is a preview only. `main` is the live site at https://yurizanoni.com/ (GitHub Pages). Do not merge without Yuri's go-ahead.
+- Direction: cold, contained, Bauhaus grid (Prada / Yohji): near-black and ivory, YZ-seal crimson `#A3161C` as the only accent.
+- Typefaces (2): Host Grotesk + JetBrains Mono, latin subset, embedded in `fonts.css` (SIL OFL 1.1).
+- Bilingual EN / PT-BR (toggle top-right; `?lang=pt` also works). Strings in `site.js`.
+- International Business is section 01, right after the hero, so prospects sent to yurizanoni.com land on the services. No prices.
+- Portrait: drop a photo at `assets/portrait.jpg` (4:5, ideally 1200×1500). It shows in grayscale over the seal panel; until then the seal panel shows.
+- Live Hong Kong clock in the hero status line; reveal-on-scroll; all motion off under prefers-reduced-motion.
