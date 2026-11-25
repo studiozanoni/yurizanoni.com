@@ -100,6 +100,15 @@
   var zhLoaded = false;
   function loadZh() {
     if (zhLoaded) return; zhLoaded = true;
+    if (location.hostname === "htmlpreview.github.io") {
+      // Preview only: htmlpreview cannot resolve relative files added later, so read the CSS from the same commit.
+      var src = location.search.slice(1).replace("https://github.com/", "https://raw.githubusercontent.com/")
+        .replace("/blob/", "/").replace(/index\.html.*$/, "fonts-zh.css");
+      fetch(src).then(function (r) { return r.text(); }).then(function (css) {
+        var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
+      });
+      return;
+    }
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "fonts-zh.css";
     document.head.appendChild(l);
   }
