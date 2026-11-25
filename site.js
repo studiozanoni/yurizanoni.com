@@ -1,66 +1,146 @@
-(function(){
-  var PT={
-    "nav.work":"Trajetória","nav.ib":"International Business","nav.contact":"Contato",
-    "hero.eyebrow":"Ásia &amp; negócios internacionais · Hong Kong",
-    "hero.lede":"Quinze anos fazendo marcas atravessarem fronteiras. Por dentro do Alibaba, da ByteDance e da Amazon. Agora do seu lado da mesa.",
-    "hero.meta":"Italo-brasileiro · Cidadão italiano · Baseado em Hong Kong",
-    "hero.cta1":"International Business",
-    "facts.years":"Anos de marketing internacional e GTM","facts.langs":"Idiomas, inclusive mandarim",
-    "facts.cos":"Empresas globais, vistas por dentro","facts.base":"Onde a Ásia encontra a Europa e o Brasil",
-    "ib.kicker":"International Business","ib.title1":"Entrar na Ásia.","ib.title2":"Comprar dela.","ib.title3":"Vender para ela.",
-    "ib.intro":"Trabalho comercial no terreno, a partir de Hong Kong, para empresas da Europa e da América Latina. Sem camadas de agência. Sem repasses.",
-    "s1.h":"Entrada na Ásia","s1.p":"Qual mercado, qual canal, qual parceiro. E depois, o lançamento.",
-    "s2.h":"Sourcing na Ásia","s2.p":"Fornecedores na China e no Sudeste Asiático encontrados, avaliados e apresentados.",
-    "s3.h":"Importação para a Ásia","s3.p":"Distribuição via Hong Kong: parceiros, canais, marketplaces.",
-    "s4.h":"Feiras","s4.p":"Delegações, reuniões com compradores, follow-up.",
-    "s5.h":"Interpretação","s5.p":"Mandarim, inglês, português, espanhol.",
-    "s6.h":"Mesa Ásia","s6.p":"Presença sênior na Ásia, em tempo parcial. Sem precisar de escritório.",
-    "eng.label":"Formas de trabalhar","eng.1h":"Por dia","eng.1p":"Feiras, visitas a fornecedores, reuniões.",
-    "eng.2h":"Por projeto","eng.2p":"Escopo fechado. Valor fechado.","eng.3h":"Por mandato","eng.3p":"Retainer mensal.",
-    "eng.cta":"Mandar o briefing",
-    "work.kicker":"Por dentro",
-    "work.title":"Por dentro das plataformas que decidem como um produto é descoberto, contado e vendido lá fora.",
-    "work.t1":"E-commerce · marketplaces","work.t2":"Conteúdo · social commerce","work.t3":"Marketplace","work.t4":"Fintech · Brasil","work.t5":"Mídia financeira",
-    "craft.1":"Entrada em mercados","craft.2":"Marca &amp; storytelling","craft.3":"Geração de demanda","craft.4":"Marketplaces",
-    "craft.5":"E-commerce","craft.6":"Fintech","craft.7":"Localização","craft.8":"Execução entre culturas",
-    "base.kicker":"Base","base.title":"Duas margens. Uma base. Seis idiomas.",
-    "base.hk":"A base, não um cartão-postal. A duas horas da China continental.",
-    "base.asia.h":"Ásia","base.asia":"Anos em Xangai, Hangzhou e Hong Kong.",
-    "base.eu.h":"Europa","base.eu":"Cidadão italiano, raízes no Vêneto e no Trentino.",
-    "base.br.h":"Brasil","base.br":"Brasileiro. Montou o time do Alibaba no Brasil.",
-    "c.title1":"Mande o briefing.","c.title2":"Receba uma proposta.",
-    "foot.regions":"Ásia · Europa · América Latina"
+(function () {
+  var T = {
+    pt: {
+      _title: "Yuri Zanoni · Ásia & Negócios Internacionais",
+      desc: "Ásia &amp; Negócios Internacionais",
+      h1a: "Expanda para a Ásia.",
+      h1b: "Compre de lá. <span class=\"nw\">Venda para lá.</span>",
+      sub1: "Baseado em Hong Kong. Fala mandarim. Ítalo-brasileiro.",
+      sub2: "Quinze anos dentro do Alibaba, da ByteDance e da Amazon. Agora do seu lado da mesa.",
+      cta: "Enviar o briefing",
+      n1: "Anos em<br>comércio global",
+      n2: "Idiomas,<br>mandarim incluído",
+      n3: "Continentes<br>de atuação",
+      n4: "Marcas globais<br>construídas por dentro",
+      sides: "Uma pessoa. Todos os lados da mesa.",
+      c1k: "香港", c1t: "Hong Kong",
+      c1p: "O hub. Porto livre, common law, impostos baixos, a duas horas da China continental.",
+      c2k: "亚洲", c2t: "Ásia",
+      c2p: "Anos em Xangai, Hangzhou e Hong Kong. Campanhas pelo Sudeste Asiático.",
+      c3k: "欧洲", c3t: "Europa",
+      c3p: "Passaporte europeu. Contratos e viagens sem atrito.",
+      c4k: "巴西", c4t: "Brasil",
+      c4p: "Brasileiro. Português e espanhol. Montou o time do Alibaba no Brasil.",
+      c5k: "人脉", c5t: "Rede",
+      c5p: "Ex-Alibaba, ByteDance, Amazon, PicPay e Bloomberg.",
+      p1: "Rigor de big tech. Preço de boutique.",
+      p2: "Sem intermediários. Sem repasses.",
+      p3: "Execução direta, na Ásia.",
+      services: "Serviços",
+      s1t: "Entrada na Ásia", s1p: "Qual mercado, qual canal, qual parceiro. Depois, o lançamento.",
+      s2t: "Fornecedores na Ásia", s2p: "Fornecedores na China e no Sudeste Asiático: encontrados, verificados, apresentados.",
+      s3t: "Importação para a Ásia", s3p: "Distribuição via Hong Kong: parceiros, canais, marketplaces.",
+      s4t: "Feiras comerciais", s4p: "As feiras da Ásia: delegações, reuniões com compradores, follow-up.",
+      s5t: "Interpretação", s5p: "Mandarim, inglês, português, espanhol.",
+      s6t: "Escritório na Ásia", s6p: "Presença sênior na Ásia, em meio período. Sem precisar de escritório.",
+      engage: "Formas de contratar",
+      engageLine: "Pague só pelo<br>que precisa.",
+      w1t: "Por dia", w1p: "Feiras, visitas a fornecedores, reuniões.",
+      w2t: "Por projeto", w2p: "Escopo fechado. Valor fechado.",
+      w3t: "Por mandato", w3p: "Mensalidade fixa.",
+      fa: "Pronto para a Ásia?",
+      fb: "Vamos conversar.",
+      fsub: "Mande o briefing. Receba uma proposta.",
+      lEmail: "E-mail",
+      foot1: "Ásia · Europa · América Latina",
+      foot2: "Baseado em Hong Kong · Fala mandarim"
+    },
+    zh: {
+      _title: "Yuri Zanoni · 亞洲與國際商務",
+      desc: "亞洲與國際商務",
+      h1a: "進軍亞洲。",
+      h1b: "從亞洲採購，<span class=\"nw\">向亞洲銷售。</span>",
+      sub1: "常駐香港，能說普通話，意大利裔巴西人。",
+      sub2: "曾在阿里巴巴、字節跳動及亞馬遜工作十五年，如今站在您這一邊。",
+      cta: "發送需求",
+      n1: "年全球商務經驗",
+      n2: "種語言，包括普通話",
+      n3: "大洲工作經歷",
+      n4: "家國際品牌內部歷練",
+      sides: "一位顧問，熟悉談判桌的每一方。",
+      c1k: "Hong Kong", c1t: "香港",
+      c1p: "樞紐所在。自由港、普通法、低稅率，距離中國內地僅兩小時。",
+      c2k: "Asia", c2t: "亞洲",
+      c2p: "多年駐上海、杭州及香港，主導東南亞各地推廣項目。",
+      c3k: "Europe", c3t: "歐洲",
+      c3p: "持歐盟護照，簽約與出行暢通無阻。",
+      c4k: "Brazil", c4t: "巴西",
+      c4p: "巴西人，通曉葡萄牙語及西班牙語，曾組建阿里巴巴的巴西團隊。",
+      c5k: "Network", c5t: "人脈",
+      c5p: "阿里巴巴、字節跳動、亞馬遜、PicPay 及彭博的校友網絡。",
+      p1: "大廠標準，精品收費。",
+      p2: "不經代理，不轉手。",
+      p3: "在亞洲親身落地執行。",
+      services: "服務",
+      s1t: "亞洲市場進入", s1p: "選定市場、渠道與合作夥伴，然後落地。",
+      s2t: "亞洲採購", s2p: "在中國及東南亞尋找、審核並引薦供應商。",
+      s3t: "進口亞洲", s3p: "經香港分銷：合作夥伴、渠道、電商平台。",
+      s4t: "商貿展覽", s4p: "亞洲各大展會：代表團、買家洽談、會後跟進。",
+      s5t: "傳譯", s5p: "普通話、英語、葡萄牙語、西班牙語。",
+      s6t: "亞洲代表", s6p: "兼職的資深亞洲駐點，無需設立辦公室。",
+      engage: "合作方式",
+      engageLine: "按需付費，<br>用多少付多少。",
+      w1t: "按日", w1p: "展會、供應商考察、商務會議。",
+      w2t: "按項目", w2p: "範圍固定，費用固定。",
+      w3t: "長期委任", w3p: "按月顧問費。",
+      fa: "準備進軍亞洲？",
+      fb: "我們談談。",
+      fsub: "發來需求，即獲方案。",
+      lEmail: "電郵",
+      foot1: "亞洲 · 歐洲 · 拉丁美洲",
+      foot2: "常駐香港 · 普通話"
+    }
   };
-  var nodes=[].slice.call(document.querySelectorAll('[data-i18n]'));
-  var EN={}; nodes.forEach(function(n){EN[n.getAttribute('data-i18n')]=n.innerHTML;});
-  function set(lang){
-    var dict=lang==='pt'?PT:EN;
-    nodes.forEach(function(n){var k=n.getAttribute('data-i18n'); if(dict[k]!=null) n.innerHTML=dict[k];});
-    document.documentElement.lang=lang==='pt'?'pt-BR':'en';
-    [].forEach.call(document.querySelectorAll('[data-lang]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===lang));});
-    try{localStorage.setItem('yz-lang',lang);}catch(e){}
+  var LANG_ATTR = { en: "en", pt: "pt-BR", zh: "zh-Hant" };
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var en = { _title: document.title };
+  nodes.forEach(function (el) { en[el.getAttribute("data-i18n")] = el.innerHTML; });
+  T.en = en;
+
+  var zhLoaded = false;
+  function loadZh() {
+    if (zhLoaded) return; zhLoaded = true;
+    var l = document.createElement("link"); l.rel = "stylesheet"; l.href = "fonts-zh.css";
+    document.head.appendChild(l);
   }
-  var q=(location.search.match(/[?&]lang=(en|pt)/)||[])[1];
-  var saved=null; try{saved=localStorage.getItem('yz-lang');}catch(e){}
-  var initial=q||saved||((navigator.language||'').toLowerCase().indexOf('pt')===0?'pt':'en');
-  if(initial!=='en') set(initial);
-  [].forEach.call(document.querySelectorAll('[data-lang]'),function(b){b.addEventListener('click',function(){set(b.getAttribute('data-lang'));});});
-
-  var bar=document.querySelector('[data-bar]');
-  function onScroll(){ if(bar) bar.classList.toggle('is-scrolled', window.scrollY>12); }
-  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-
-  var clock=document.querySelector('[data-clock]');
-  if(clock){
-    var fmt=null;
-    try{fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Hong_Kong',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});}catch(e){}
-    var tick=function(){ if(fmt) clock.textContent=fmt.format(new Date()); };
-    tick(); setInterval(tick,1000);
+  function apply(lang) {
+    if (!T[lang]) lang = "en";
+    if (lang === "zh") loadZh();
+    var d = T[lang];
+    nodes.forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (d[k] != null) el.innerHTML = d[k];
+    });
+    document.title = d._title;
+    document.documentElement.lang = LANG_ATTR[lang];
+    document.querySelectorAll(".lang a").forEach(function (a) {
+      var on = a.getAttribute("data-lang") === lang;
+      a.classList.toggle("on", on);
+      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    try { localStorage.setItem("yz-lang", lang); } catch (e) {}
   }
 
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els=[].slice.call(document.querySelectorAll('.reveal'));
-  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(e){io.observe(e);});
+  function fromHash() {
+    var h = (location.hash || "").replace("#", "").toLowerCase();
+    return T[h] ? h : null;
+  }
+
+  document.querySelectorAll(".lang a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var l = a.getAttribute("data-lang");
+      apply(l);
+      if (history.replaceState) history.replaceState(null, "", "#" + l);
+    });
+  });
+
+  var start = fromHash();
+  if (!start) { try { start = localStorage.getItem("yz-lang"); } catch (e) {} }
+  if (!start) {
+    var nl = (navigator.language || "en").toLowerCase();
+    start = nl.indexOf("pt") === 0 ? "pt" : (nl.indexOf("zh") === 0 ? "zh" : "en");
+  }
+  apply(start);
+  window.addEventListener("hashchange", function () { var h = fromHash(); if (h) apply(h); });
 })();
