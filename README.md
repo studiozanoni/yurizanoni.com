@@ -1,12 +1,11 @@
-# yurizanoni.com — redesign preview (branch `redesign-classy-2026`)
+# yurizanoni.com
 
-Personal site for Yuri Zanoni. Static HTML/CSS + small JS, no build step, no tracking, no external requests.
+Yuri Zanoni · Asia & International Business. Static site served by GitHub Pages (CNAME yurizanoni.com).
 
-**Preview only. Do not merge into `main` until Yuri approves and ib.yurizanoni.com is live.** `main` is the live apex (GitHub Pages).
+- `index.html`: single page, a web version of the International Business one-pager.
+- `site.js`: language switch EN / PT-BR / 中文 (Traditional). Link a language with `#en`, `#pt`, `#zh`.
+- `styles.css`: International Business palette only: cream #F4ECE1, ink #141A26, scarlet #A3161D.
+- `fonts.css`: self-hosted subsets of TeX Gyre Pagella and Inter. `fonts-zh.css`: Noto Serif/Sans CJK TC subsets, loaded only for 中文.
+- Seal: official `YZ-International-Business-scarlet_seal_transparent.png` from the YZ Brand Kit, embedded in `index.html`.
 
-- Direction: cold, contained, Bauhaus grid (Prada / Yohji): near-black and ivory, YZ-seal crimson `#A3161C` as the only accent.
-- Typefaces (2): Host Grotesk + JetBrains Mono, latin subset, embedded in `fonts.css` (SIL OFL 1.1).
-- Bilingual EN / PT-BR (toggle top-right; `?lang=pt` also works). Strings in `site.js`.
-- International Business is section 01, right after the hero, so prospects sent to yurizanoni.com land on the services. No prices.
-- Portrait: drop a photo at `assets/portrait.jpg` (4:5, ideally 1200×1500). It shows in grayscale over the seal panel; until then the seal panel shows.
-- Live Hong Kong clock in the hero status line; reveal-on-scroll; all motion off under prefers-reduced-motion.
+Follows YZ Brand Guide v1.0. No external requests.
