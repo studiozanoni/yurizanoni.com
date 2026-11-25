@@ -20,10 +20,16 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="yz-glyph" viewBox="161 198 574 500"><path fill="currentColor" fill-rule="evenodd" d="M161 198H735L474 459V645H698V698H161L410 448ZM288 250H608L448 410ZM288 645L421 512V645Z"/></symbol>
+    <symbol id="yz-logo" viewBox="0 0 896 896"><rect x="8" y="8" width="880" height="880" rx="56" fill="#A3171E"/><rect x="44" y="44" width="808" height="808" rx="22" fill="none" stroke="#F4EDE2" stroke-width="10"/><rect x="68" y="68" width="760" height="760" rx="10" fill="none" stroke="#F4EDE2" stroke-width="4"/><path fill="#F4EDE2" fill-rule="evenodd" d="M161 198H735L474 459V645H698V698H161L410 448ZM288 250H608L448 410ZM288 645L421 512V645Z"/></symbol>
+  </defs>
+</svg>
 
 <header class="bar" data-bar>
   <a class="brand" href="#top" aria-label="Yuri Zanoni, home">
-    <img class="brand-logo" src="logo.svg" alt="" width="36" height="36">
+    <svg class="brand-logo" width="34" height="34" aria-hidden="true"><use href="#yz-logo"/></svg>
     <span class="brand-name">Yuri Zanoni</span>
   </a>
   <nav class="nav" aria-label="Primary">
@@ -50,7 +56,7 @@
     <div class="hero-mark" aria-hidden="true">
       <!-- Portrait slot: when the photo is supplied, replace this panel with <img src="yuri.jpg" alt="Yuri Zanoni"> -->
       <div class="panel">
-        <img src="mark.svg" alt="" class="panel-glyph">
+        <svg class="panel-glyph" aria-hidden="true"><use href="#yz-glyph"/></svg>
         <span class="mono panel-meta">YZ / 22.28°N 114.16°E</span>
       </div>
     </div>
@@ -163,7 +169,7 @@
 </main>
 
 <footer class="foot mono">
-  <img src="logo.svg" alt="" width="22" height="22">
+  <svg width="22" height="22" aria-hidden="true"><use href="#yz-logo"/></svg>
   <span>© 2026 Yuri Zanoni</span>
   <span>Asia · Europe · Latin America</span>
 </footer>

@@ -20,7 +20,7 @@ body {
   font-family: var(--sans); font-size: 1.0625rem; line-height: 1.5; font-weight: 400;
   letter-spacing: -.011em; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-img { display: block; max-width: 100%; }
+img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 ::selection { background: var(--red); color: var(--bone); }
@@ -89,7 +89,7 @@ ul, ol { list-style: none; }
   content: ""; position: absolute; left: 0; right: 0; height: 1px; top: 0;
   background: rgba(244, 239, 230, .5); animation: scan 6s var(--ease) infinite;
 }
-.panel-glyph { width: 52%; height: auto; }
+.panel-glyph { width: 52%; aspect-ratio: 574 / 500; height: auto; color: var(--bone-2); }
 .panel-meta { position: absolute; left: 28px; bottom: 26px; color: rgba(244, 239, 230, .78); font-size: .66rem; }
 @keyframes scan { 0% { top: 0; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
 
