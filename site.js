@@ -6,7 +6,7 @@
       h1a: "Expanda para a Ásia.",
       h1b: "Compre de lá. <span class=\"nw\">Venda para lá.</span>",
       sub1: "Baseado em Hong Kong. Fala mandarim. Ítalo-brasileiro.",
-      sub2: "Quinze anos dentro do Alibaba, da ByteDance e da Amazon. Agora do seu lado da mesa.",
+      sub2: "Mais de 10 anos dentro do Alibaba, da ByteDance e da Amazon. Agora do seu lado da mesa.",
       cta: "Enviar o briefing",
       n1: "Anos em<br>comércio global",
       n2: "Idiomas,<br>mandarim incluído",
@@ -44,6 +44,8 @@
       hper: "60 min · pagamento integral na reserva",
       hcta: "Reservar e pagar",
       hnote: "Pagamento seguro com cartão via Stripe. Você escolhe o horário logo depois.",
+      cnt: "Plataformas chinesas no Brasil",
+      cnp: "TikTok Shop, Shopee, Temu e Keeta (da Meituan) estão chegando ou crescendo no Brasil. Elas funcionam com regras, algoritmos e um ritmo de operação que vêm da Ásia. Para quem vende ou importa no Brasil, isso significa novos canais de venda e nova concorrência. Quem entende como essas plataformas funcionam por dentro sai na frente.",
       engage: "Formas de contratar",
       engageLine: "Pague só pelo<br>que precisa.",
       w1t: "Por dia", w1p: "Feiras, visitas a fornecedores, reuniões.",
@@ -62,7 +64,7 @@
       h1a: "進軍亞洲。",
       h1b: "從亞洲採購，<span class=\"nw\">向亞洲銷售。</span>",
       sub1: "常駐香港，能說普通話，意大利裔巴西人。",
-      sub2: "曾在阿里巴巴、字節跳動及亞馬遜工作十五年，如今站在您這一邊。",
+      sub2: "曾在阿里巴巴、字節跳動及亞馬遜工作超過10年，如今站在您這一邊。",
       cta: "發送需求",
       n1: "年全球商務經驗",
       n2: "種語言，包括普通話",
@@ -100,6 +102,8 @@
       hper: "60 分鐘 · 預約時全額付款",
       hcta: "預約並付款",
       hnote: "經 Stripe 安全刷卡付款，付款後即可選擇時間。",
+      cnt: "中國平台在巴西",
+      cnp: "TikTok Shop、Shopee、Temu 及美團旗下的 Keeta 正進入巴西或在當地擴展。這些平台的規則、演算法和營運節奏源自亞洲。對巴西賣家和進口商而言，這意味著新的銷售渠道，也意味著新的競爭。了解平台內部運作的人，就能搶先一步。",
       engage: "合作方式",
       engageLine: "按需付費，<br>用多少付多少。",
       w1t: "按日", w1p: "展會、供應商考察、商務會議。",
@@ -140,7 +144,7 @@
     var d = T[lang];
     nodes.forEach(function (el) {
       var k = el.getAttribute("data-i18n");
-      if (d[k] != null) el.innerHTML = d[k];
+      el.innerHTML = d[k] != null ? d[k] : T.en[k];
     });
     document.title = d._title;
     document.documentElement.lang = LANG_ATTR[lang];

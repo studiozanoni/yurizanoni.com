@@ -202,3 +202,45 @@ html[lang="zh-Hant"] .hour-kicker, html[lang="zh-Hant"] .hour-sub, html[lang="zh
 }
 html[lang="zh-Hant"] .hour-kicker { font-size: 14px; }
 html[lang="zh-Hant"] .hour-sub, html[lang="zh-Hant"] .hour-price .per { font-size: 13px; }
+
+/* Asia Hour as its own section (above Guias e manuais and services) */
+.hour-sec { padding-top: clamp(80px, 9vw, 128px); }
+.hour-sec .hour { margin-top: 0; }
+
+/* Guias e manuais · Guides */
+.guides { padding-top: clamp(80px, 9vw, 128px); }
+.guide-group + .guide-group { margin-top: 16px; }
+.guide-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.guide { background: var(--paper); border-top: 3px solid var(--scarlet); padding: 26px 24px 28px; display: flex; flex-direction: column; }
+.guide-lang { font-size: 12px; font-weight: 600; letter-spacing: .08em; color: var(--ink-2); margin-bottom: 14px; }
+.guide h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.2; margin-bottom: 12px; }
+.guide-desc { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin-bottom: 24px; }
+.guide-buy { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-top: 18px; }
+.guide-price { font-family: var(--serif); font-size: 32px; line-height: 1; }
+.guide-btn { margin-top: 0; white-space: nowrap; }
+.guides-more { margin-top: 28px; font-size: 15.5px; color: var(--ink-2); }
+.guides-more a { color: var(--scarlet); font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+/* Plataformas chinesas no Brasil */
+.cnbr { padding-top: clamp(80px, 9vw, 128px); }
+.cnbr-text { font-family: var(--serif); font-size: clamp(19px, 1.7vw, 23px); line-height: 1.5; max-width: 40em; }
+.cnbr-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.cnbr-ctas .btn { margin-top: 0; }
+.btn-line { background: transparent; color: var(--scarlet); box-shadow: inset 0 0 0 1px var(--scarlet); }
+.btn-line:hover { background: var(--scarlet); color: var(--cream); }
+html[lang="zh-Hant"] .cnbr-text { letter-spacing: .04em; }
+
+/* footer Substack link */
+.foot-link { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(244, 236, 225, .45); }
+.foot-link:hover { border-bottom-color: var(--cream); }
+
+@media (max-width: 1080px) { .guide-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) {
+  .guide-cards { grid-template-columns: 1fr; gap: 12px; }
+  .guide { padding: 22px 20px 24px; }
+  .guide h3 { font-size: 22px; }
+  .cnbr-ctas { flex-direction: column; }
+  .cnbr-ctas .btn { text-align: center; }
+  .band-foot .foot-link { align-self: flex-start; }
+}
+.lang a { white-space: nowrap; }
